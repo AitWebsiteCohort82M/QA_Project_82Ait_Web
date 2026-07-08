@@ -11,11 +11,11 @@ public class Main {
         driver.manage().window().maximize();
 
         driver.get("https://www.my-ait.com/account/my-account");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         WebElement loginWithEmailButton = driver.findElement(By.cssSelector("[data-testid='switchToEmailLink'] button"));
         loginWithEmailButton.click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         WebElement username = driver.findElement(By.cssSelector("input[id^='input_input_emailInput']"));
         username.sendKeys("aitwebsitecohort82m@gmail.com");
@@ -28,9 +28,10 @@ public class Main {
 
         WebElement loginButton = driver.findElement(By.cssSelector("button[data-testid='buttonElement']"));
         loginButton.click();
+        Thread.sleep(4000);
 
-        WebElement weRespectYourPrivacyButton = driver.findElement(By.id("cst-cookies-submit"));
-        loginButton.click();
+        WebElement weRespectYourPrivacyButton = driver.findElement(By.cssSelector("button.cst-cookies-btn.cst-all-btn"));
+        weRespectYourPrivacyButton.click();
 
     }
 }
