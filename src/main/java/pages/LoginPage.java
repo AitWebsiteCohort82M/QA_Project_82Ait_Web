@@ -16,13 +16,14 @@ public class LoginPage extends HelperBase {
     }
 
     public LoginPage fillEmail(String email) {
-        type(By.id("input_input_emailInput_SM_ROOT_COMP943"), email);
+        type(
+                By.cssSelector("input[type='email'][autocomplete='email']"), email);
         pause(5000);
         return this;
     }
 
     public LoginPage fillPassword(String password) {
-        type(By.id("input_input_passwordInput_SM_ROOT_COMP943"), password);
+        type(By.xpath("//input[@type='password']"), password);
         pause(5000);
         return this;
     }
